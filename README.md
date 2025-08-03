@@ -32,3 +32,56 @@ we can also check from live toppic list to ensure our data type fit our setting
 
 <img width="3024" height="1828" alt="image" src="https://github.com/user-attachments/assets/3a1cf46f-4a17-43c2-b68e-031f4c9be7be" />
 
+
+## 📦 Understanding `colcon build` in ROS 2
+
+### 🛠 What `colcon build` Does
+
+ROS 2 will:
+
+- 🔍 Search your `src/` folder for ROS 2 packages
+- 🧱 Build Python (`setup.py`) or C++ (`CMakeLists.txt`) packages
+- 📦 Place the installed files into the `install/` folder
+- 📚 Register nodes, launch files, and other assets so `ros2 run` and `ros2 topic` can access them
+
+---
+
+### 📌 When to Run `colcon build`
+
+You should run `colcon build`:
+
+- After creating a new package
+- After changing source code
+- After editing `setup.py` or `CMakeLists.txt`
+- After adding new dependencies or launch files
+
+---
+
+### ⚠️ If You Skip This Step
+
+If you don’t run `colcon build`:
+
+- `ros2 run` may return **"No executable found"**
+- ROS 2 won’t recognize your package
+- Custom messages/services won’t be available
+
+---
+
+### 🧠 Simple Analogy
+
+Running `colcon build` is like:
+
+- 🛠 Compiling C++ code
+- 📦 Installing a local Python package
+- 🧹 Organizing your code so ROS 2 knows how to use it
+
+---
+
+### ✅ Example
+
+```bash
+cd ~/ros2_ws
+colcon build
+source install/setup.bash
+
+
