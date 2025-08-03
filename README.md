@@ -19,7 +19,7 @@
 
 ---
 
-3. Pub/Sub Sending Int64 Msg
+3. Publisher Sending Int64 Msg
 
 <img width="3024" height="1826" alt="image" src="https://github.com/user-attachments/assets/386d9b04-e1cb-48b2-afa4-98d3ade88aa0" />
 
@@ -28,4 +28,7 @@ we can also check from live toppic list to ensure our data type fit our setting
 <img width="3024" height="1824" alt="image" src="https://github.com/user-attachments/assets/82a1dd6a-2bfd-4031-8e9b-4aa22a103931" />
 
 
-5. 
+5. Subscriber Receiving Int64 Msg
+
+<img width="3024" height="1828" alt="image" src="https://github.com/user-attachments/assets/3a1cf46f-4a17-43c2-b68e-031f4c9be7be" />
+
