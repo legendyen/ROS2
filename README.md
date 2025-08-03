@@ -19,6 +19,13 @@
 
 ---
 
+3. Pub/Sub Sending Int64 Msg
+
+<img width="3024" height="1826" alt="image" src="https://github.com/user-attachments/assets/386d9b04-e1cb-48b2-afa4-98d3ade88aa0" />
 
 
-4. 
+we can also check from live toppic list to ensure our data type fit our setting
+<img width="3024" height="1824" alt="image" src="https://github.com/user-attachments/assets/82a1dd6a-2bfd-4031-8e9b-4aa22a103931" />
+
+
+5. 
