@@ -1,7 +1,8 @@
 # ROS2
 
 1. Setup turtlesim and  view publisher/subscriber topic info
-<img width="3024" height="1816" alt="image" src="https://github.com/user-attachments/assets/9fe874a4-9221-4a8f-83a2-5611d06a8b5e" />
+
+<img width="3024" height="1964" alt="image" src="https://github.com/user-attachments/assets/7cfacffd-2188-4e28-9611-c48f82d1559f" />
 
 2. Create a package space to control our turtle
 <img width="3024" height="1832" alt="image" src="https://github.com/user-attachments/assets/2c444e5d-57bc-4ec9-a426-f00237ce1c3a" />
