@@ -32,6 +32,11 @@ we can also check from live toppic list to ensure our data type fit our setting
 
 <img width="3024" height="1828" alt="image" src="https://github.com/user-attachments/assets/3a1cf46f-4a17-43c2-b68e-031f4c9be7be" />
 
+6. Use the launch file to launch the whole pub/sub package (both publosher and subscriber node)
+
+<img width="3024" height="1964" alt="image" src="https://github.com/user-attachments/assets/00cd37b8-62cb-44cf-ac77-e9b0a0ef56b4" />
+
+
 
 ## 📦 Understanding `colcon build` in ROS 2
 
