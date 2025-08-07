@@ -36,6 +36,11 @@ we can also check from live toppic list to ensure our data type fit our setting
 
 <img width="3024" height="1964" alt="image" src="https://github.com/user-attachments/assets/00cd37b8-62cb-44cf-ac77-e9b0a0ef56b4" />
 
+we can also view how our noeds are conncted in rqt (a GUI interface that provides a modular, plugin-based interface to visualize and interact with your ROS nodes, topics, services, parameters)
+
+<img width="3024" height="1964" alt="image" src="https://github.com/user-attachments/assets/ca78618c-ffb2-486f-ae4b-6d9748b930a0" />
+
+
 
 
 ## 📦 Understanding `colcon build` in ROS 2
