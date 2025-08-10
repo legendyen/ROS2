@@ -10,6 +10,8 @@ The project demonstrates:
 - Reading `/turtle1/pose` to check position
 - Automating a navigation pattern with Python
 
+[Watch Demo](https://drive.google.com/file/d/1M_AJ7Sn6wv7JMguiNfQONg4498JTFVk4/view?usp=sharing)
+
 
 
 # 🚀 Getting Started
