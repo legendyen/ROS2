@@ -41,6 +41,67 @@ we can also view how our noeds are conncted in rqt (a GUI interface that provide
 
 <img width="3024" height="1964" alt="image" src="https://github.com/user-attachments/assets/ca78618c-ffb2-486f-ae4b-6d9748b930a0" />
 
+# Turtlesim Keyboard Teleoperation vs Python Script Control
+
+This document explains the message flow and control differences between using `turtle_teleop_key` and a Python script to control Turtlesim in ROS 2.
+
+---
+
+## 🐢 In `turtle_teleop_key`
+- **Publisher:** `turtle_teleop_key` node
+- **Message type:** `geometry_msgs/Twist`
+- **Topic:** `/turtle1/cmd_vel`
+
+**How it works:**
+- Every time you press a key, `turtle_teleop_key` creates a `Twist` message (with linear & angular velocities) and publishes it to `/turtle1/cmd_vel`.
+- It’s essentially saying:  
+  > "Hey turtle, here’s your velocity command."
+  > <img width="2836" height="1062" alt="image" src="https://github.com/user-attachments/assets/fede559a-5a92-4b3c-aacf-8cdd12709acf" />
+
+
+---
+
+## 🖥️ In `turtlesim_node`
+- **Subscriber:** `turtlesim_node`
+- **Subscribed topic:** `/turtle1/cmd_vel`
+
+**What it does:**
+- Listens for incoming `Twist` messages.
+- Updates the turtle’s position & orientation based on those commands.
+
+---
+
+## 🔄 Order of Events
+1. You press an arrow key.
+2. `turtle_teleop_key` **publishes** a `Twist` message → `/turtle1/cmd_vel`.
+3. `turtlesim_node` **receives** that message and moves the turtle.
+
+---
+
+## 📜 Using a Python Script
+If you later write a Python script:
+- It will also act as a **publisher** to `/turtle1/cmd_vel`.
+- If both run, both will send velocity commands.
+- The **last message** received by `turtlesim_node` at any moment wins.
+
+---
+
+## 📊 Summary Table
+
+| Control Method        | Role       | Topic              | Publishes Messages? | Requires Manual Input? |
+|-----------------------|-----------|--------------------|----------------------|------------------------|
+| `turtle_teleop_key`   | Publisher | `/turtle1/cmd_vel` | Yes (`Twist`)        | Yes                    |
+| Python Script         | Publisher | `/turtle1/cmd_vel` | Yes (`Twist`)        | No (automated)         |
+| `turtlesim_node`      | Subscriber| `/turtle1/cmd_vel` | No                   | N/A                    |
+
+---
+
+## 📝 Notes
+- `turtle_teleop_key` is always the **publisher**.
+- `turtlesim_node` is always the **subscriber**.
+- Multiple publishers can send commands to the same topic — the most recent message determines the turtle's movement.
+
+
 
 
 
@@ -94,5 +155,8 @@ Running `colcon build` is like:
 cd ~/ros2_ws
 colcon build
 source install/setup.bash
+
+
+
 
 
